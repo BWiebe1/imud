@@ -1,0 +1,15 @@
+[Unit]
+Description=IMU Server
+After=multi-user.target
+
+[Service]
+User=root
+Group=root
+RestartSec=3
+TimeoutStopSec=5s
+Restart=always
+WorkingDirectory=/data/imud
+ExecStart=/usr/bin/python imu_server.py
+
+[Install]
+WantedBy=multi-user.target

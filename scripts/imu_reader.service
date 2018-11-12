@@ -1,0 +1,14 @@
+[Unit]
+Description=IMU Reader
+After=multi-user.target
+
+[Service]
+User=root
+Group=root
+RestartSec=3
+Restart=always
+WorkingDirectory=/data/imud
+ExecStart=/usr/bin/python imu_reader.py
+
+[Install]
+WantedBy=multi-user.target
