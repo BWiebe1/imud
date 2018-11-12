@@ -9,7 +9,7 @@ RestartSec=3
 TimeoutStopSec=5s
 Restart=always
 WorkingDirectory=/data/imud
-ExecStart=/usr/bin/python imu_server.py
+ExecStart=/usr/bin/python server.py
 
 [Install]
 WantedBy=multi-user.target
