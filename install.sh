@@ -51,7 +51,7 @@ case "$1" in
         neutis
         ;;
     *)
-        cpu_count=$(getconf _NPROCESSORS_ONLN)
+        cpu_count=$(grep -c ^processor /proc/cpuinfo)
         case $cpu_count in
             "edison")
                 edison
