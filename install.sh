@@ -53,10 +53,10 @@ case "$1" in
     *)
         cpu_count=$(grep -c ^processor /proc/cpuinfo)
         case $cpu_count in
-            "edison")
+            "2")
                 edison
                 ;;
-            "neutis")
+            "4")
                 neutis
                 ;;
             *)
