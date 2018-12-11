@@ -45,8 +45,6 @@ def main():
             roll = math.degrees(data["fusionPose"][0])
             pitch = math.degrees(data["fusionPose"][1])
             yaw = math.degrees(data["fusionPose"][2])
-            if yaw < 0:
-                yaw += 360
             data = {"r": roll, "p": pitch, "y": yaw, "t": clock}
             output_file = open("/tmp/imu", "w")
             output_file.write(json.dumps(data) + "\n")
